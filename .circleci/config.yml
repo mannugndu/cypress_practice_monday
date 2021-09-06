@@ -8,6 +8,6 @@ workflows:
     example-workflow:
       jobs:
         - cypress/run:
-            context: cypress_keys_temp 
+            context: cypress_practice_monday_keys 
             record: true
             store_artifacts: true
