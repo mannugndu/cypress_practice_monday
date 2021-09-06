@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2021-09-06T07:19:32.324Z",
-    "end": "2021-09-06T07:19:34.494Z",
-    "duration": 2170,
+    "start": "2021-09-06T07:44:53.609Z",
+    "end": "2021-09-06T07:44:56.164Z",
+    "duration": 2555,
     "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "ea78a552-d015-4e3a-a01b-5ea04e911ecd",
+      "uuid": "83d96c7f-0ee5-48e5-a9c0-c89241ef9f47",
       "title": "",
       "fullFile": "cypress/integration/todoAppTests/allTodos.spec.js",
       "file": "cypress/integration/todoAppTests/allTodos.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "da5e332a-daa7-4176-b4a3-db4754239ce7",
+          "uuid": "4ad04a87-74db-454d-8737-2fdc4e8e0a1d",
           "title": "ToDo HomePage Tests - All Todos",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Should display 2 todos by default",
               "fullTitle": "ToDo HomePage Tests - All Todos Should display 2 todos by default",
               "timedOut": null,
-              "duration": 800,
+              "duration": 1538,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "allTodoPage.assertNumberOfTodos(2).assertTodos(todos);",
               "err": {},
-              "uuid": "593a65b5-83a6-451f-adb5-14b91355c159",
-              "parentUUID": "da5e332a-daa7-4176-b4a3-db4754239ce7",
+              "uuid": "f21a4b43-3393-47ed-a887-61d7938d89b9",
+              "parentUUID": "4ad04a87-74db-454d-8737-2fdc4e8e0a1d",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Should be able to add todo",
               "fullTitle": "ToDo HomePage Tests - All Todos Should be able to add todo",
               "timedOut": null,
-              "duration": 934,
+              "duration": 651,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "const newTodo = \"Feed the cat\";\nconst newTodoList = [...todos, newTodo];\nallTodoPage.addNewTodo(newTodo).assertNumberOfTodos(3).assertTodos(newTodoList);",
               "err": {},
-              "uuid": "afdb8879-84dc-455c-a858-3a9ccb6f64e9",
-              "parentUUID": "da5e332a-daa7-4176-b4a3-db4754239ce7",
+              "uuid": "f7795b12-4227-4c9a-ad7c-d469159ff819",
+              "parentUUID": "4ad04a87-74db-454d-8737-2fdc4e8e0a1d",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "Should be able to mark the todo items as completed",
               "fullTitle": "ToDo HomePage Tests - All Todos Should be able to mark the todo items as completed",
               "timedOut": null,
-              "duration": 393,
+              "duration": 293,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -83,22 +83,22 @@
               "context": null,
               "code": "const targetTodo = todos[0];\nallTodoPage.markTodoAsCompleted(targetTodo).assertTodoIsCompleted(targetTodo);",
               "err": {},
-              "uuid": "e5b05df3-cd7e-40c9-98c1-254001ff5efb",
-              "parentUUID": "da5e332a-daa7-4176-b4a3-db4754239ce7",
+              "uuid": "78621245-38aa-4923-8800-338da12a4644",
+              "parentUUID": "4ad04a87-74db-454d-8737-2fdc4e8e0a1d",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "593a65b5-83a6-451f-adb5-14b91355c159",
-            "afdb8879-84dc-455c-a858-3a9ccb6f64e9",
-            "e5b05df3-cd7e-40c9-98c1-254001ff5efb"
+            "f21a4b43-3393-47ed-a887-61d7938d89b9",
+            "f7795b12-4227-4c9a-ad7c-d469159ff819",
+            "78621245-38aa-4923-8800-338da12a4644"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 2127,
+          "duration": 2482,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

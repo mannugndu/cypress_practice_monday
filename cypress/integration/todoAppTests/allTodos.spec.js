@@ -30,4 +30,12 @@ describe("ToDo HomePage Tests - All Todos", () => {
       .markTodoAsCompleted(targetTodo)
       .assertTodoIsCompleted(targetTodo);
   });
+
+  it("example test", () => {
+    const targetTodo = todos[0];
+
+    allTodoPage
+      .markTodoAsCompleted(targetTodo)
+      .assertTodoIsCompleted(targetTodo);
+  });
 });
