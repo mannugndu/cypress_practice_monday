@@ -1,0 +1,7 @@
+{
+  "projectId": "qnqutu",
+  "reporter": "cypress-mochawesome-reporter",
+  "baseUrl":"https://example.cypress.io",
+  "viewportWidth": 1500,
+  "viewportHeight": 1000
+}
