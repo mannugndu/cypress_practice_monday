@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2021-09-06T07:19:23.630Z",
-    "end": "2021-09-06T07:19:25.890Z",
-    "duration": 2260,
+    "start": "2021-09-06T07:44:48.221Z",
+    "end": "2021-09-06T07:44:49.596Z",
+    "duration": 1375,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "be4ce5ad-f6de-40a7-9f8b-60e10d45ba66",
+      "uuid": "417a9d10-b4d9-4b65-a137-e6394ee1373d",
       "title": "",
       "fullFile": "cypress/integration/todoAppTests/activeTodos.spec.js",
       "file": "cypress/integration/todoAppTests/activeTodos.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "246ca11d-5583-47b8-9b97-7271a350df62",
+          "uuid": "75407ddd-aa44-441b-b558-e6665118b0f3",
           "title": "ToDo HomePage Tests - All Todos",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Should display all active todos",
               "fullTitle": "ToDo HomePage Tests - All Todos Should display all active todos",
               "timedOut": null,
-              "duration": 2150,
+              "duration": 1311,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "const activeTodo = todos.filter(todo => !todo.completed).map(todo => todo.title);\nactiveTodosPage.assertNumberOfTodos(activeTodo.length).assertTodos(activeTodo);",
               "err": {},
-              "uuid": "b9f8abc1-2329-4b03-b8fd-549ed6ce55e3",
-              "parentUUID": "246ca11d-5583-47b8-9b97-7271a350df62",
+              "uuid": "8e68deeb-d088-43df-9a22-5c51ccc60171",
+              "parentUUID": "75407ddd-aa44-441b-b558-e6665118b0f3",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "b9f8abc1-2329-4b03-b8fd-549ed6ce55e3"
+            "8e68deeb-d088-43df-9a22-5c51ccc60171"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 2150,
+          "duration": 1311,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
