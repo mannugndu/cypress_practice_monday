@@ -11,13 +11,13 @@ jobs:
         uses: cypress-io/github-action@v5
         with:
           browser: chrome
+          start: |
+            cd example_app
+            npx http-server
+          wait-on: 'http://localhost:8080'
 
       - uses: actions/upload-artifact@v3
         if: always()
         with:
           name: Reports
           path: cypress/reports
-          start: |
-            cd example_app
-            npx http-server
-          wait-on: 'http://localhost:8080'
