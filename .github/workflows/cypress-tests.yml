@@ -7,14 +7,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Install dependencies
+        uses: actions/setup-node@v3
+        run: |
+          npm ci
+          cd example_app
+          npx http-server &
+
       - name: Cypress run
         uses: cypress-io/github-action@v5
         with:
           browser: chrome
-          start: |
-            npm install
-            cd example_app
-            npx http-server
           wait-on: 'http://localhost:8080'
 
       - uses: actions/upload-artifact@v3
