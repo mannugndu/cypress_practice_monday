@@ -9,7 +9,7 @@ jobs:
 
       - name: Install dependencies
         uses: actions/setup-node@v3
-        run: |
+      - run: |
           npm ci
           cd example_app
           npx http-server &
