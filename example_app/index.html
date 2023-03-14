@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            border: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+        }
+        .activity_wrapper {
+            border:20px
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <ul>
+        <li>
+            <p> Hello from HTML </p>
+            <button onclick="printMsg('ClickMe - HTML')">Click Me</button>
+            </br>
+            <button onclick="printMsg('ClickHere - HTML')">Click Here</button>
+        </li>
+        <li>
+            <p> Hello from DOM </p>
+            <button onclick="printMsg('ClickMe - DOM')">Click Me</button>
+            </br>
+            <button onclick="printMsg('ClickHere - DOM')">Click Here</button>
+        </li>
+        <li>
+            <p> Hello from JavaScript </p>
+            <button onclick="printMsg('ClickMe - JavaScript')">Click Me</button>
+            </br>
+            <button onclick="printMsg('ClickHere - JavaScript')">Click Here</button>
+        </li>
+    </ul>
+
+    <br />
+
+    <div class="activity_wrapper">
+        <h2>Suggested activity: <span id="activity"></span></h2>
+        
+    </div>
+
+</body>
+<script>
+    function printMsg(msg) {
+        console.log(msg)
+    }
+
+    (() => {
+        fetch("https://www.boredapi.com/api/activity")
+            .then((response) => response.json())
+            .then((data) => {
+                console.log(data)
+                document.getElementById('activity').innerHTML = data.activity
+            });
+    })()
+
+
+</script>
+
+</html>

@@ -1,7 +1,20 @@
 {
   "projectId": "qnqutu",
-  "reporter": "cypress-mochawesome-reporter",
-  "baseUrl":"https://example.cypress.io",
+  "baseUrl": "https://example.cypress.io",
   "viewportWidth": 1500,
-  "viewportHeight": 1000
+  "viewportHeight": 1000,
+  "screenshotOnRunFailure": true,
+  "screenshotsFolder": "cypress/reports/mochareports/assets",
+  "video": true,
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "reporterEnabled": "mochawesome",
+    "mochawesomeReporterOptions": {
+      "reportDir": "cypress/reports/mocha",
+      "quite": true,
+      "overwrite": true,
+      "html": false,
+      "json": true
+    }
+  }
 }
