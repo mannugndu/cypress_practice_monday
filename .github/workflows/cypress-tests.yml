@@ -12,6 +12,7 @@ jobs:
         with:
           browser: chrome
           start: |
+            npm install
             cd example_app
             npx http-server
           wait-on: 'http://localhost:8080'
