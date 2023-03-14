@@ -1,5 +1,7 @@
+const activity = 'Get Some Rest'
 beforeEach(() => {
-    cy.visit("http://127.0.0.1:5500/example_app/index.html");
+    cy.intercept("https://www.boredapi.com/api/activity", { activity });
+    cy.visit("http://127.0.0.1:8080");
 })
 
 it("Demonstrate within command", () => {
@@ -41,9 +43,6 @@ it("Demo of parent, parents, parentsUntil, siblings", () => {
     cy.get('button').first().siblings(); // Get the parent and return all the children but does not include the target element
 })
 
-it.only("Demo for request command", () => {
-    const activity = 'Get Some Rest'
-    cy.intercept("https://www.boredapi.com/api/activity", { activity });
-
+it("Demo for request command", () => {
     cy.get('#activity').should("have.text",activity)
 })
