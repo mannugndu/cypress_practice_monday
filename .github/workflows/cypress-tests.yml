@@ -20,6 +20,11 @@ jobs:
           browser: chrome
           wait-on: 'http://localhost:8080'
 
+      - name: Merge reports
+        if: always()
+        run: |
+          npm run get-report
+
       - uses: actions/upload-artifact@v3
         if: always()
         with:
