@@ -10,5 +10,6 @@ it("Demostrates screenshots on failure and record videos, including plugion [Cyp
     cy.visit("/");
     cy.waitfor(2);
     console.error("There is some error during running the tests"); // works with chrome
+    cy.log("Clicking on invalid locator...");
     cy.get("invalid locator").click();
 })
