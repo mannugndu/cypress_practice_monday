@@ -5,14 +5,14 @@
   "viewportHeight": 1000,
   "screenshotOnRunFailure": true,
   "screenshotsFolder": "cypress/reports/mochareports/assets",
-  "video": true,
+  "video": false,
   "reporter": "cypress-multi-reporters",
   "reporterOptions": {
     "reporterEnabled": "mochawesome",
     "mochawesomeReporterOptions": {
       "reportDir": "cypress/reports/mocha",
       "quite": true,
-      "overwrite": true,
+      "overwrite": false,
       "html": false,
       "json": true
     }
